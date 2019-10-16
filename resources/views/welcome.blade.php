@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" type="text/css" href=""><!-- Directamente la carpeta, ya empieza desde public -->
         <title>Laravel</title>
 
         <!-- Fonts -->

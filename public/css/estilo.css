@@ -1,0 +1,74 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+@font-face{
+	font-family: Dancing;
+	src: url(../fonts/DancingScript-Bold.ttf);
+}
+#contenedor{
+	background-color: rgba(250, 252, 230, 1);
+}
+nav{
+	background-color: rgba(0,0,0,0.7);
+	padding: 10px 0 10px 0;
+}
+ul{
+	display: flex;
+	flex-direction: row;
+}
+li{
+	list-style: none;
+	margin: 10px;
+}
+li::after{
+	content: " | ";
+}
+a{
+	text-decoration: none;
+	color: white;
+
+}
+header{
+	position: relative;
+}
+#entrada{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+img{
+	/*Hay que recortar un poco la imagen*/
+	width: 100%;
+}
+h1{
+	font-size: 8em;
+	font-family: Dancing;
+	-webkit-text-stroke: 1px lightpink;
+	color: white;
+	text-shadow: 1px 1px black;
+	letter-spacing: 10px;
+}
+h3{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0 10px 0;
+}
+article{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+.tarjeta{
+	width: 30%;
+	height: 150px;
+	box-shadow: 5px 5px 5px grey;
+	background-color: white;
+	margin: 5px;
+}
