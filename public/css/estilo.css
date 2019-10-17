@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	padding: 0;
+	font-family: sans-serif;
 }
 @font-face{
 	font-family: Dancing;
@@ -8,20 +9,21 @@
 }
 #contenedor{
 	background-color: rgba(250, 252, 230, 1);
+	padding-bottom: 20px;
 }
 nav{
 	background-color: rgba(0,0,0,0.7);
 	padding: 10px 0 10px 0;
 }
-ul{
+nav ul{
 	display: flex;
 	flex-direction: row;
 }
-li{
+nav li{
 	list-style: none;
 	margin: 10px;
 }
-li::after{
+nav li::after{
 	content: " | ";
 }
 a{
@@ -55,6 +57,10 @@ h1{
 	text-shadow: 1px 1px black;
 	letter-spacing: 10px;
 }
+section{
+
+
+}
 h3{
 	width: 100%;
 	text-align: center;
@@ -63,6 +69,7 @@ h3{
 article{
 	width: 100%;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-around;
 }
 .tarjeta{
@@ -71,4 +78,21 @@ article{
 	box-shadow: 5px 5px 5px grey;
 	background-color: white;
 	margin: 5px;
+	position: relative;
 }
+#direccion{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 0.9em;
+}
+
+.datos{
+	display:none;
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.8);
+}
+
