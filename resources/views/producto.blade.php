@@ -8,6 +8,11 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="js/JQuery/jquery-3.1.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+        <script src="js/validation.js"></script>
 
     </head>
     <body>
@@ -18,13 +23,13 @@
         </div>
         <div>
             <!-- Formulario de modificación y visualización de datos -->
-            <form action="" method="POST">
+            <form id="modificar" action="" method="get">
                 Nombre: <input type="text" name="name" value="Camiseta sandia L"><br>
                 Descripción: <input type="text" name="descripcion" value="Camiseta con estampado de sandias"><br>
                 Stock: <input type="number" name="stock" value="2"><br>
                 Enlaces de interés: <input type="text" name="enlace"><br>
                 <!-- Botones de administración de productos de la tienda -->
-                <button>Modificar</button>
+                <button id="modificar">Modificar</button>
             </form>
         </div>
     </body>
