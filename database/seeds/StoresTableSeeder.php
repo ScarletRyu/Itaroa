@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Store;
 
 class StoresTableSeeder extends Seeder
 {
@@ -11,11 +12,17 @@ class StoresTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('stores')->insert([
-        	'name'=>'HyM',
-        	'photo'=>'img/hm.png',
-        	'schedule'=>'9:00 - 21:00',
 
-        ]);
+
+        $json = File::get('database/data/storeData.json');
+        $data = json_decode($json);
+        foreach ($data as $obj) {
+            Store::create(array(
+                'name' => $obj->name,
+                'photo' => $obj->photo,
+                'schedule' => $obj->schedule
+            ));
+        }
+
     }
 }
