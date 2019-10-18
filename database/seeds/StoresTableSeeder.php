@@ -19,8 +19,11 @@ class StoresTableSeeder extends Seeder
         foreach ($data as $obj) {
             Store::create(array(
                 'name' => $obj->name,
+                'type' => $obj->type,
+                'phone' => $obj->phone,
                 'photo' => $obj->photo,
-                'schedule' => $obj->schedule
+                'openAt' => $obj->openAt,
+                'closeAt' => $obj->closeAt
             ));
         }
 
