@@ -18,7 +18,7 @@
     <body>
         <div>
             <!-- Imagen y nombre del producto -->
-            <img src="algunaruta" alt="Imagen no encontrada">
+            <img src="algunaruta" alt="Image not found">
             <h2>Camiseta </h2>
         </div>
         <div>
