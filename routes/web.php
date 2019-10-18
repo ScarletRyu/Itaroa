@@ -16,3 +16,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+/*Route::get('tienda', 'TiendaController@show'); */
+Route::get('/tienda', 'TiendaController@show')->name('tienda');
+
+
+
+
+

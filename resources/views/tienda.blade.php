@@ -53,7 +53,9 @@
         </div>
         <div>
             <!-- Botones de administración de productos de la tienda -->
-            <button>Añadir</button>
+            <form action="anadirproducto.php">
+                <input type="submit" value="Añadir nuevo producto" />
+            </form>
             <button>Eliminar</button>
         </div>
     </body>

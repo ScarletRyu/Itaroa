@@ -13,7 +13,7 @@
 		<nav>
 			<ul>
 				<li><a href="#restaurantes">Restaurantes</a></li>
-				<li><a href="#tiendas">Tiendas</a></li>
+				<li><a href="tienda">Tiendas</a></li>
 				<li><a href="#ubicacion">Donde estamos</a></li>
 				<li></li>
 			</ul>

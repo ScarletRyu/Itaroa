@@ -6,8 +6,7 @@
 
         <title>Itaroa</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        
 
     </head>
     <body>
@@ -24,8 +23,10 @@
                 Stock: <input type="number" name="stock"><br>
                 Enlaces de interés: <input type="text" name="enlace"><br>
                 <!-- Botones de administración de productos de la tienda -->
-                <button>Crear</button>
+                <form action="anadirproducto.php">
+                <input type="submit" value="Añadir nuevo producto" />
             </form>
+            
         </div>
     </body>
 </html>
