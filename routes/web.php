@@ -16,6 +16,3 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/producto', function(){
-	return view('producto');
-});
