@@ -20,7 +20,7 @@
         <div>
             <!-- Imagen y nombre de la tienda -->
             <img src="algunaruta" alt="Imagen no encontrada">
-            <h2>Zara</h2>
+            <h2>{{$store->name}}</h2>
         </div>
         <div>
             <!-- Listado de productos de la tienda -->
@@ -31,30 +31,19 @@
                     <th>Stock</th>
                     <th>Enlace</th>
                 </tr>
+                @foreach($products as $product)
                 <tr>
-                    <td>001</td>
-                    <td>Camiseta</td>
-                    <td>32</td>
-                    <td><button>Ver</button></td>
+                    <td>{{$product->id}}</td>
+                    <td>{{$product->name}}</td>
+                    <td>{{$product->stock}}</td>
+                    <td><a href="{{Route('products.show', $product->id)}}">Ver</a></td>
                 </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Pantalón</td>
-                    <td>14</td>
-                    <td><button>Ver</button></td>
-                </tr>
-                <tr>
-                    <td>003</td>
-                    <td>Zapatatillas</td>
-                    <td>20</td>
-                    <td><button>Ver</button></td>
-                </tr>
+                @endforeach
             </table>
         </div>
         <div>
             <!-- Botones de administración de productos de la tienda -->
             <button>Añadir</button>
-            <button>Eliminar</button>
         </div>
     </body>
 </html>
