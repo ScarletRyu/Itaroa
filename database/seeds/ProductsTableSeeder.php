@@ -23,7 +23,7 @@ class ProductsTableSeeder extends Seeder
                 'price' => $obj->price,
                 'photo' => $obj->photo,
                 'link' => $obj->link,
-                'id_store' => $obj->id_store
+                'store_id' => $obj->store_id
             ));
         }
     }

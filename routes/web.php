@@ -11,8 +11,10 @@
 |
 */
 
+Route::get('/', 'StoreController@index');
 
-Route::get('/', function () {
-    return view('index');
-});
+
+Route::resource('stores', 'StoreController')->only('index', 'show');
+Route::resource('products', 'ProductController')->only('show', 'store');
+
 

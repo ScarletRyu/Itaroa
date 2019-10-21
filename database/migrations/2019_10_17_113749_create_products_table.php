@@ -21,8 +21,8 @@ class CreateProductsTable extends Migration
             $table->string('price');
             $table->string('photo');
             $table->string('link');
-            $table->unsignedBigInteger('id_store');
-            $table->foreign('id_store')->references('id')->on('stores')->onDelete('cascade');
+            $table->unsignedBigInteger('store_id');
+            $table->foreign('store_id')->references('id')->on('stores')->onDelete('cascade');
             $table->timestamps();
         });
     }
