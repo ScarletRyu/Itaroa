@@ -17,12 +17,19 @@
 				<li><a href="#ubicacion">Donde estamos</a></li>
 				<li></li>
 			</ul>
+
+		<div id="Idiomas">
+        <img class="flags" src="img/flags/ukflag.jpeg" onclick="traducir('eng')">				
+	    <img class="flags" src="img/flags/spainflag.jpeg" onclick="traducir('esp')">
+        <img class="flags" src="img/flags/euskalflag.jpeg" onclick="traducir('eus')">
+    </div>
 		</nav>
 		<header>
 			<img src="img/portada.jpg">
 			<div id="entrada">
 				<h1>Itaroa</h1>
 			</div>
+			
 		</header>
 		<section>
 			<h3>TIENDAS</h3>

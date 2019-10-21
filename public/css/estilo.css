@@ -95,6 +95,19 @@ article{
 	height: 100%;
 	background-color: rgba(0,0,0,.8);
 }
+/* Traduccion */
+#Idiomas{
+	display: flex;
+	flex-direction: row-reverse;
+	align-self: center;
+	margin-right: 1em;
+}
+.banderas{
+	
+	width: 0.2em;
+	height: 0.5em;
+}
+
 
 /* Estilos y flex para añadir nuevo producto */
 .flex-outer li,
