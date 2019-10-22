@@ -39,8 +39,8 @@
 					<div class="datos">
 						<ul>
 							<li>Nombre:<a href="{{route('stores.show', $shop->id)}}">{{$shop->name}}</a></li>
-							<li>Nombre: </li>
-							<li>Nombre: Paco</li>
+							<li>Abre a las: {{$shop->openAt}}</li>
+							<li>Cierra a las: {{$shop->closeAt}}</li>
 						</ul>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 					<div class="datos">
 						<ul>
 							<li>Nombre:<a href="{{route('stores.show', $restaurant->id)}}">{{$restaurant->name}}</a></li>
-							<li>Nombre: </li>
+							<li>Abre a las: {{$restaurant->openAt}}</li>
 							<li>Nombre: Paco</li>
 						</ul>
 					</div>

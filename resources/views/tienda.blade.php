@@ -37,6 +37,7 @@
                     <td>{{$product->name}}</td>
                     <td>{{$product->stock}}</td>
                     <td><a href="{{Route('products.show', $product->id)}}">Ver</a></td>
+                    <td><a href="{{Route('products.delete', $product->id)}}">Eliminar</a></td>
                 </tr>
                 @endforeach
             </table>

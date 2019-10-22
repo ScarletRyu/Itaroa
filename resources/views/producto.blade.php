@@ -18,18 +18,22 @@
     <body>
         <div>
             <!-- Imagen y nombre del producto -->
-            <img src="algunaruta" alt="Image not found">
-            <h2>Camiseta </h2>
+            <img src="{{$product->photo}}" alt="Imagen no encontrada">
+            <h2>{{$product->name}} </h2>
         </div>
         <div>
             <!-- Formulario de modificación y visualización de datos -->
-            <form id="modificar" action="" method="get">
-                Nombre: <input type="text" name="name" value="Camiseta sandia L"><br>
-                Descripción: <input type="text" name="descripcion" value="Camiseta con estampado de sandias"><br>
-                Stock: <input type="number" name="stock" value="2"><br>
-                Enlaces de interés: <input type="text" name="enlace"><br>
+        <form id="modificar" method="POST" action="{{ route('products.update',$product->id) }}" novalidate>
+            @csrf
+            @method('PUT')
+                Nombre: <input type="text" name="name" value="{{$product->name}}" ><br>
+                Descripción: <input type="text" name="description" value="{{$product->description}}" ><br>
+                Precio: <input type="text" name="price" value="{{$product->price}}" ><br>
+                Stock: <input type="number" name="stock" value="{{$product->stock}}" ><br>
+                Image: <input type="file" name="photo" value="{{$product->photo}}" ><br>
+                Enlaces de interés: <input type="text" name="link" value="{{$product->link}}" ><br>
                 <!-- Botones de administración de productos de la tienda -->
-                <button id="modificar">Modificar</button>
+                <button type="submit">Modificar</button>
             </form>
         </div>
     </body>

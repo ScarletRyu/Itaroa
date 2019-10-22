@@ -63,8 +63,8 @@ class ProductController extends Controller
     {
         // Busco el producto con el id en cuestión
         $product = Product::find($id)->get();
-
-        return view('producto')->with(['product' => $product]);
+        var_dump($product[0]);
+        return view('producto')->with(['product' => $product[0]]);
     }
 
     /**
@@ -87,7 +87,15 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $product = Product::find($id);
+        $product->id = $request->input('name');
+        $product->description = $request->input('description');
+        $product->stock = $request->input('stock');
+        $product->price = $request->input('price');
+        $product->link = $request->input('link');
+        $product->photo = $request->input('photo');
+        $product->save();
+        return back();
     }
 
     /**
@@ -99,6 +107,6 @@ class ProductController extends Controller
     public function destroy($id)
     {
         Product::where('id',$id)->delete();
-        return ;
+        return refresh();
     }
 }
