@@ -17,6 +17,12 @@
 				<li><a href="#ubicacion">Donde estamos</a></li>
 				<li></li>
 			</ul>
+
+		<div id="Idiomas">
+        <img class="flags" src="img/flags/ukflag.jpeg" onclick="traducir('eng')">				
+	    <img class="flags" src="img/flags/spainflag.jpeg" onclick="traducir('esp')">
+		<img class="flags" src="img/flags/euskalflag.jpeg" onclick="traducir('eus')">
+		
 		</nav>
 		<header>
 			<img src="img/portada.jpg">
