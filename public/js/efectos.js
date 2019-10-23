@@ -4,5 +4,6 @@ $(document).ready(function($) {
 	},function(){
 		$(this).children('.datos').fadeOut(200);
 	})
+
 	
 });

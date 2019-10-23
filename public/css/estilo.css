@@ -3,34 +3,68 @@
 	padding: 0;
 	font-family: sans-serif;
 }
+body{
+	font-size: 16px;
+}
 @font-face{
 	font-family: Dancing;
 	src: url(../fonts/DancingScript-Bold.ttf);
 }
-#contenedor{
-	background-color: rgba(250, 252, 230, 1);
-	padding-bottom: 20px;
+@font-face{
+	font-family: Italianno;
+	src: url(../fonts/Italianno-Regular.ttf);
 }
 nav{
-	background-color: rgba(0,0,0,0.7);
-	padding: 10px 0 10px 0;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+
 }
+#idiomas{
+	background-color: rgba(255, 255, 255,.7);
+	
+}
+#buscador{
+	background-color: rgba(44, 140, 230,.7);
+	
+}
+
 nav ul{
 	display: flex;
 	flex-direction: row;
 }
-nav li{
+li{
 	list-style: none;
-	margin: 10px;
 }
-nav li::after{
-	content: " | ";
-}
-a{
-	text-decoration: none;
-	color: white;
+#buscador li{
+	padding: 10px 20px 10px 20px;
 
 }
+#idiomas ul{
+	justify-content: flex-end;
+}
+#idiomas li{
+	margin-right: 7px;
+	color: black;
+	list-style: none;
+	text-decoration: none;
+}
+#idiomas li:hover{
+	color: rgba(14, 120, 27, 1);
+}
+
+a{
+	text-decoration: none;
+
+}
+#buscador a{
+	color: white;
+}
+#buscador li:hover{
+	background-color: rgba(44, 140, 230,1);
+	
+}
+
 header{
 	position: relative;
 }
@@ -45,26 +79,28 @@ header{
 	align-items: center;
 
 }
-img{
-	/*Hay que recortar un poco la imagen*/
+header img{
 	width: 100%;
+	height: 90vh,
 }
 h1{
 	font-size: 8em;
 	font-family: Dancing;
-	-webkit-text-stroke: 1px lightpink;
+	-webkit-text-stroke: 1px green;
 	color: white;
-	text-shadow: 1px 1px black;
+	text-shadow: 1px 6px 1px lightslategray;
 	letter-spacing: 10px;
 }
 section{
-
-
+	margin: 10px 0 10px 0;
 }
 h3{
 	width: 100%;
 	text-align: center;
 	padding: 30px 0 10px 0;
+	font-family: Italianno;
+	font-size: 2.5em;
+	color: #ed5113;
 }
 article{
 	width: 100%;
@@ -72,13 +108,19 @@ article{
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
+#ubicacion{
+	margin-top: 60px;
+}
 .tarjeta{
-	width: 30%;
-	height: 150px;
+	width: 200px;
+	height: 200px;
 	box-shadow: 5px 5px 5px grey;
 	background-color: white;
 	margin: 5px;
 	position: relative;
+}
+.tarjeta img{
+	width: 100%;
 }
 #direccion{
 	margin-top: 20px;
@@ -93,6 +135,60 @@ article{
 	top:0;
 	width:100%;
 	height: 100%;
-	background-color: rgba(0,0,0,.8);
+	background-color: rgba(237, 148, 55, 1);
+}
+.datos li{
+	margin: 10px;
+}
+.datos a{
+	text-decoration: none;
+	color: black;
+}
+
+#mapa{
+	width: 95%;
+}
+form{
+	margin-top: 40px;
+	padding: 0 10px 0 10px;
+}
+#nombre, #email, textarea{
+	width: 350px;
+}
+
+footer{
+	background-color: rgba(37, 43, 38,1);
+	text-align: center;
+	color: white;
+	margin-top: 60px;
+}
+.link{
+	width: 200px;
+	height: 200px;
+}
+
+@media (max-width: 600px){
+	body{
+		font-size: 18px;
+	}
+	#buscador ul{
+		flex-direction: column;
+		/*align-items: center;*/
+	}
+	#buscador li{
+		width: 100%;
+		text-align: center;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	h1{
+		font-size: 5em;
+	}
+	#nombre, #email, textarea{
+	width: 95%;
+	}
+
+
+
 }
 
