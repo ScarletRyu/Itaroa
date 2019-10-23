@@ -62,9 +62,10 @@ class ProductController extends Controller
     public function show($id)
     {
         // Busco el producto con el id en cuestión
+        var_dump($id);
         $product = Product::find($id)->get();
-        var_dump($product[0]);
-        return view('producto')->with(['product' => $product[0]]);
+        var_dump($product[$id-1]);
+        return view('producto')->with(['product' => $product[$id-1]]);
     }
 
     /**
@@ -106,7 +107,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Product::where('id',$id)->delete();
-        return refresh();
+        var_dump($id);
+        Product::destroy($id);
+        return back();
     }
 }

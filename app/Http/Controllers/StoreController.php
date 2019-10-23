@@ -17,7 +17,6 @@ class StoreController extends Controller
     {
         $shops = Store::where('type', 'shop')->get();
         $restaurants = Store::where('type', 'restaurant')->get();
-        var_dump($restaurants[1]->photo);
         return view('index')->with(['shops' => $shops, 'restaurants' => $restaurants]);
     }
 
