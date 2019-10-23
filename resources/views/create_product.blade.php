@@ -18,11 +18,15 @@
         </div>
         <div>
             <!-- Formulario de modificación y visualización de datos -->
-            <form action="" method="POST">
+            <form action="{{Route('products.store')}}" method="post">
+                @csrf
+                
+                <input type="hidden" name="store_id" value="{{$store_id}}">
                 Nombre: <input type="text" name="name"><br>
                 Descripción: <input type="text" name="descripcion"><br>
                 Stock: <input type="number" name="stock"><br>
-                Enlaces de interés: <input type="text" name="enlace"><br>
+                Precio: <input type="number" name="price"><br>
+                Enlaces de interés: <input type="text" name="link"><br>
                 <!-- Botones de administración de productos de la tienda -->
                 <button>Crear</button>
             </form>

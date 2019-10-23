@@ -40,10 +40,10 @@
                     <td><a href="{{Route('products.show', $product->id)}}">Ver</a></td>
                     <td>
                         <form action="{{ route('products.destroy',$product->id) }}" method="post">
-                      @csrf
-                      @method('DELETE')
-                        <button type="submit">Eliminar</button>
-                    </form>
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Eliminar</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach
@@ -51,7 +51,11 @@
         </div>
         <div>
             <!-- Botones de administración de productos de la tienda -->
-            <button>Añadir</button>
+            <form action="{{Route('form')}}" method="get">
+                @csrf
+                <input type="hidden" name="store_id" value="{{$store->id}}">
+                <button type="submit">Añadir</button>
+            </form>
         </div>
     </body>
 </html>

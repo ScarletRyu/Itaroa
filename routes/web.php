@@ -12,6 +12,7 @@
 */
 
 Route::get('/', 'StoreController@index');
+Route::get('create_product', 'StoreController@form')->name('form');
 
 
 Route::resource('stores', 'StoreController')->only('index', 'show');

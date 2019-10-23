@@ -68,6 +68,14 @@ class StoreController extends Controller
         //
     }
 
+    // metodo para llamar al formulario
+    public function form(request $request)
+    {
+
+        $store_id = $request->store_id;
+        return view('create_product')->with(['store_id' => $store_id]);
+    }
+
     /**
      * Update the specified resource in storage.
      *

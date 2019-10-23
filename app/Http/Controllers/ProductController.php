@@ -44,13 +44,11 @@ class ProductController extends Controller
         $product->stock = $request->stock;
         $product->price = $request->price;
         $product->link = $request->link;
-        $product->photo = $request->photo;
-        // Cojo el id de la tienda relacionada al producto por medio de la sesion
-        $product->store_id = Auth::store()->id;
+        $product->store_id = $request->store_id;
         // Guardo el objeto
         $product->save();
         // Vuelvo a la vista tienda con un mensaje de confirmación de que se ha creado correctamente el producto
-        return back()->with('confirmation','Producto creado correctamente');
+        return redirect()->route('stores.show',$product->store_id);
     }
 
     /**
