@@ -15,6 +15,6 @@ Route::get('/', 'StoreController@index');
 
 
 Route::resource('stores', 'StoreController')->only('index', 'show');
-Route::resource('products', 'ProductController')->only('show', 'store');
+Route::resource('products', 'ProductController')->only('show', 'store', 'update', 'delete');
 
 
