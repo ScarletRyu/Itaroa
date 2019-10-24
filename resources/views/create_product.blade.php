@@ -34,7 +34,7 @@
                 Precio: <input type="number" name="price"><br>
                 Enlaces de interés: <input type="text" name="link"><br>
                 <!-- Botones de administración de productos de la tienda -->
-                <button type="submit" class="validar">Crear</button>
+                <button type="submit" id="botonCrear" class="validar">Crear</button>
             </form>
         </div>
     </body>

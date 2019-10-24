@@ -33,7 +33,7 @@
                 Image: <input type="file" name="photo" value="{{$product->photo}}" ><br>
                 Enlaces de interés: <input type="text" name="link" value="{{$product->link}}" ><br>
                 <!-- Botones de administración de productos de la tienda -->
-                <button id="boton" type="submit" class="validar">Modificar</button>
+                <button id="botonModificar" type="submit" class="validar">Modificar</button>
             </form>
         </div>
     </body>
