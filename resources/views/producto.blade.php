@@ -23,7 +23,7 @@
         </div>
         <div>
             <!-- Formulario de modificación y visualización de datos -->
-        <form id="modificar" method="POST" action="{{ route('products.update',$product->id) }}" novalidate>
+        <form id="form" method="POST" action="{{ route('products.update',$product->id) }}" novalidate>
             @csrf
             @method('PUT')
                 Nombre: <input type="text" name="name" value="{{$product->name}}" ><br>
@@ -32,8 +32,7 @@
                 Stock: <input type="number" name="stock" value="{{$product->stock}}" ><br>
                 Image: <input type="file" name="photo" value="{{$product->photo}}" ><br>
                 Enlaces de interés: <input type="text" name="link" value="{{$product->link}}" ><br>
-                <!-- Botones de administración de productos de la tienda -->
-                <button id="botonModificar" type="submit" class="validar">Modificar</button>
+                <button id="submit" type="submit" class="validar">Modificar</button>
             </form>
         </div>
     </body>
