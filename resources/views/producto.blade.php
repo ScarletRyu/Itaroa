@@ -9,10 +9,10 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <!-- Scripts -->
-        <script src="js/JQuery/jquery-3.1.1.js"></script>
+        <script src="/js/JQuery/jquery-3.1.1.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
-        <script src="js/validation.js"></script>
+        <script type="text/javascript" src="/js/validation.js"></script>
 
     </head>
     <body>
@@ -33,7 +33,7 @@
                 Image: <input type="file" name="photo" value="{{$product->photo}}" ><br>
                 Enlaces de interés: <input type="text" name="link" value="{{$product->link}}" ><br>
                 <!-- Botones de administración de productos de la tienda -->
-                <button type="submit">Modificar</button>
+                <button id="botonModificar" type="submit" class="validar">Modificar</button>
             </form>
         </div>
     </body>

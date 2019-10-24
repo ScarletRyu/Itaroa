@@ -1,10 +1,21 @@
 // Validaciones
 // Espera a que se cargue el documento
 $(document).ready(function(){
-	// Cada vez que se cambie un input se ejecutará la funcion validate
-	$('input').change(function(){
+	document.getElementById('boton').addEventListener("click", function(event){
+  		event.preventDefault()
+	});
 
-/*						Formulario de modificación de productos 					*/
+	$('#boton').click(function(){
+		console.log('Has pulsado el boton');
+		// Recojo los elementos del formulario
+		var name = getElementByTagName('name').value;
+		console.log(name);
+
+	});
+	
+});
+
+/*						Formulario de modificación de productos 					
 
 		// Llama a la funcion validate del plugin de jquery
 		$('#modificar').validate({
@@ -36,7 +47,7 @@ $(document).ready(function(){
 			}
 		});
 
-/*						Formulario de creación de productos 					*/
+/*						Formulario de creación de productos 					
 
 		// Llama a la funcion validate del plugin de jquery
 		$('#crear').validate({
@@ -67,5 +78,4 @@ $(document).ready(function(){
 				}
 			}
 		});
-	});
-});
+	});*/
