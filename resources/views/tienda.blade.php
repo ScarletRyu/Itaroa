@@ -30,6 +30,7 @@
                     <th>Nombre</th>
                     <th>Stock</th>
                     <th>Enlace</th>
+                    <th>Eliminar</th>
                 </tr>
                 @foreach($products as $product)
                 <tr>
@@ -37,14 +38,24 @@
                     <td>{{$product->name}}</td>
                     <td>{{$product->stock}}</td>
                     <td><a href="{{Route('products.show', $product->id)}}">Ver</a></td>
-                    <td><a href="{{Route('products.delete', $product->id)}}">Eliminar</a></td>
+                    <td>
+                        <form action="{{ route('products.destroy',$product->id) }}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Eliminar</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </table>
         </div>
         <div>
             <!-- Botones de administración de productos de la tienda -->
-            <button>Añadir</button>
+            <form action="{{Route('form')}}" method="get">
+                @csrf
+                <input type="hidden" name="store_id" value="{{$store->id}}">
+                <button type="submit">Añadir</button>
+            </form>
         </div>
     </body>
 </html>

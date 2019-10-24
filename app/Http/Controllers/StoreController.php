@@ -17,7 +17,6 @@ class StoreController extends Controller
     {
         $shops = Store::where('type', 'shop')->get();
         $restaurants = Store::where('type', 'restaurant')->get();
-        var_dump($restaurants[1]->photo);
         return view('index')->with(['shops' => $shops, 'restaurants' => $restaurants]);
     }
 
@@ -67,6 +66,14 @@ class StoreController extends Controller
     public function edit($id)
     {
         //
+    }
+
+    // metodo para llamar al formulario
+    public function form(request $request)
+    {
+
+        $store_id = $request->store_id;
+        return view('create_product')->with(['store_id' => $store_id]);
     }
 
     /**

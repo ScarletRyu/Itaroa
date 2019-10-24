@@ -44,13 +44,11 @@ class ProductController extends Controller
         $product->stock = $request->stock;
         $product->price = $request->price;
         $product->link = $request->link;
-        $product->photo = $request->photo;
-        // Cojo el id de la tienda relacionada al producto por medio de la sesion
-        $product->store_id = Auth::store()->id;
+        $product->store_id = $request->store_id;
         // Guardo el objeto
         $product->save();
         // Vuelvo a la vista tienda con un mensaje de confirmación de que se ha creado correctamente el producto
-        return back()->with('confirmation','Producto creado correctamente');
+        return redirect()->route('stores.show',$product->store_id);
     }
 
     /**
@@ -62,9 +60,10 @@ class ProductController extends Controller
     public function show($id)
     {
         // Busco el producto con el id en cuestión
+        var_dump($id);
         $product = Product::find($id)->get();
-        var_dump($product[0]);
-        return view('producto')->with(['product' => $product[0]]);
+        var_dump($product[$id-1]);
+        return view('producto')->with(['product' => $product[$id-1]]);
     }
 
     /**
@@ -88,7 +87,7 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::find($id);
-        $product->id = $request->input('name');
+        $product->name = $request->input('name');
         $product->description = $request->input('description');
         $product->stock = $request->input('stock');
         $product->price = $request->input('price');
@@ -106,7 +105,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        Product::where('id',$id)->delete();
-        return refresh();
+        var_dump($id);
+        Product::destroy($id);
+        return back();
     }
 }
