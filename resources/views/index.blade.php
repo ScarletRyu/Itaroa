@@ -11,19 +11,6 @@
 </head>
 <body>
 	<div id="contenedor">
-<<<<<<< HEAD
-		<nav>
-			<ul>
-				<li><a href="#restaurantes">Restaurantes</a></li>
-				<li><a href="#tiendas">Tiendas</a></li>
-				<li><a href="#ubicacion">Donde estamos</a></li>
-				<li></li>
-			</ul>
-		
-		</nav>
-=======
-		
->>>>>>> 41365759fcb95870a6dfb436912d51227f79dcae
 		<header>
 			<img src="img/portada.jpg">
 			<div id="entrada">

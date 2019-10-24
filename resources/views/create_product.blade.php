@@ -8,6 +8,12 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <!-- Scripts -->
+        <script src="js/JQuery/jquery-3.1.1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+        <script src="js/validation.js"></script>
+
 
     </head>
     <body>
@@ -18,7 +24,7 @@
         </div>
         <div>
             <!-- Formulario de modificación y visualización de datos -->
-            <form action="{{Route('products.store')}}" method="post">
+            <form id="crear" action="{{Route('products.store')}}" method="post">
                 @csrf
                 
                 <input type="hidden" name="store_id" value="{{$store_id}}">
