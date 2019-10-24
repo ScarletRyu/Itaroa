@@ -7,23 +7,12 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/jquery/jquery-3.1.1.js"></script>
 	<script src="js/efectos.js"></script>
+    <script type="text/javascript" src="js/Traduccion/jquery.translate.js"></script>
+    <script type="text/javascript" src="js/Traduccion/Diccionario.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 </head>
 <body>
 	<div id="contenedor">
-<<<<<<< HEAD
-		<nav>
-			<ul>
-				<li><a href="#restaurantes">Restaurantes</a></li>
-				<li><a href="#tiendas">Tiendas</a></li>
-				<li><a href="#ubicacion">Donde estamos</a></li>
-				<li></li>
-			</ul>
-		
-		</nav>
-=======
-		
->>>>>>> 41365759fcb95870a6dfb436912d51227f79dcae
 		<header>
 			<img src="img/portada.jpg">
 			<div id="entrada">
@@ -33,22 +22,22 @@
 		<nav>
 			<div id="buscador">
 				<ul>
-					<li><a href="#stores">Tiendas</a></li>
-					<li><a href="#rests">Restaurantes</a></li>
-					<li><a href="#ubicacion">Donde estamos</a></li>
-					<li><a href="#contacto">Contacta con nosotros</a></li>
+					<li class="trn" data-trn-key="Tienda"><a href="#stores">Tiendas</a></li>
+					<li class="trn" data-trn-key="Restaurante"><a href="#rests">Restaurantes</a></li>
+					<li class="trn" data-trn-key="Ubicacion"><a href="#ubicacion">Donde estamos</a></li>
+					<li class="trn" data-trn-key="Contacto"><a href="#contacto">Contacta con nosotros</a></li>
 				</ul>
 			</div>
 			<div id="idiomas">
 				<ul>
-					<li>Eu</li>
-					<li>En</li>
-					<li>Es</li>
+					<li onclick="traducir('eus')" >Eu</li>
+					<li onclick="traducir('eng')">En</li>
+					<li onclick="traducir('esp')">Es</li>
 				</ul>
 			</div>
 		</nav>
 		<section id="stores">
-			<h3>TIENDAS</h3>
+			<h3 class="trn" data-trn-key="TitTienda">tiendas</h3>
 			<article>
 				@foreach($shops as $shop)
 				
@@ -59,9 +48,9 @@
 					<div class="datos">
 						<ul>
 							<li><a href="{{route('stores.show', $shop->id)}}">{{$shop->name}}</a></li>
-							<li>De: {{$shop->openAt}}</li>
-							<li>A: {{$shop->closeAt}}</li>
-							<li>Teléfono: {{$shop->phone}}</li>
+							<li class="trn" data-trn-key="Tienda1">De: {{$shop->openAt}}</li>
+							<li class="trn" data-trn-key="Tienda2">A: {{$shop->closeAt}}</li>
+							<li class="trn" data-trn-key="Tienda3">Teléfono: {{$shop->phone}}</li>
 						</ul>
 					</div>
 
@@ -71,7 +60,7 @@
 			</article>
 		</section>
 		<section id="rests">
-			<h3>RESTAURANTES</h3>
+			<h3 class="trn" data-trn-key="TitRestaurante">restaurantes</h3>
 			<article>
 				@foreach($restaurants as $restaurant)
 				<div class="tarjeta">
@@ -79,9 +68,9 @@
 					<div class="datos">
 						<ul>
 							<li><a href="{{route('stores.show', $restaurant->id)}}">{{$restaurant->name}}</a></li>
-							<li>De: {{$restaurant->openAt}}</li>
-							<li>A: {{$restaurant->closeAt}}</li>
-							<li>Teléfono: {{$restaurant->phone}}</li>
+							<li class="trn" data-trn-key="Rest1">De: {{$restaurant->openAt}}</li>
+							<li class="trn" data-trn-key="Rest2">A: {{$restaurant->closeAt}}</li>
+							<li class="trn" data-trn-key="Rest3">Teléfono: {{$restaurant->phone}}</li>
 						</ul>
 					</div>
 				</div>
@@ -95,11 +84,11 @@
 		</section>
 		<section id="contacto">
 			<form>
-				<label>Nombre: </label><br>
+				<label class="trn" data-trn-key="name1">Nombre: </label><br>
 				<input id="nombre" type="text" name="" placeholder="ej: Paco Jimenez"><br>
-				<label>E-mail: </label><br>
+				<label class="trn" data-trn-key="mail1">E-mail: </label><br>
 				<input id="email" type="email" name="" placeholder="ej: pacojimenez@tucorreo.com"><br>
-				<label>Escribenos tu comentario</label><br>
+				<label class="trn" data-trn-key="coment1">Escribenos tu comentario</label><br>
 				<textarea id="comentario"></textarea><br>
 				<input type="button" name="" value="Enviar">
 			</form>
