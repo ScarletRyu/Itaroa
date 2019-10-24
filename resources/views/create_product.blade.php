@@ -28,12 +28,15 @@
                 @csrf
                 
                 <input type="hidden" name="store_id" value="{{$store_id}}">
-                Nombre: <input type="text" name="name"><br>
-                Descripción: <input type="text" name="description"><br>
-                Stock: <input type="number" name="stock"><br>
-                Precio: <input type="number" name="price"><br>
-                Enlaces de interés: <input type="text" name="link"><br>
-                <button type="submit" id="submit" class="validar">Crear</button>
+                <label>Nombre:</label> <input type="text" data-required=true data-text=true name="name"><br>
+                <label>Descripción:</label> <input type="text" data-required=true data-text=true name="description"><br>
+                <label>Stock:</label> <input type="number" data-required=true data-number=true name="stock"><br>
+                <label>Precio:</label> <input type="number" data-required=true data-number=true name="price"><br>
+                <label>Enlaces de interés:</label> <input type="text" data-required=true data-text=true name="link"><br>
+                <button type="submit" id="submit" class="validar">Crear</button><br>
+                <div id='numError'>Los campos 'precio' y 'stock' deben ser numeros.</div><br>
+                <div id='textError'>No introduzcas etiquetas html o scripts.</div><br>
+                <div id='requiredError'>Todos los campos que tengan * son requeridos.</div>
             </form>
         </div>
     </body>

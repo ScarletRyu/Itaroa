@@ -1,114 +1,74 @@
 // Validaciones
 // Espera a que se cargue el documento
 $(document).ready(function(){
-		// Evito que se recargue la pagina al darle al boton	
-		document.getElementById('submit').addEventListener("click", function(event){
-	  		event.preventDefault()
-		});
 
-		$('#submit').click(function(){
-			console.log('Has pulsado el boton');
-			// Recojo el formulario (Modificar)
-			var form = document.getElementById('form');
+	// Boton
+	let submit = document.getElementById('submit');
+	// Deshabilito el boton
+	submit.disabled = true;
+	$('requiredError').hide();
+	$('textError').hide();
+	$('numError').hide();
+
+	$('input').change(function(){
+		console.log('ALgun input esta cambiando');
+		$('requiredError').hide();
+		$('textError').hide();
+		$('numError').hide();
+		validator();
+
+	});
+
+	
+	function validator(){
+		console.log('Empieza a validar');
+		// Todos los inputs
+		let inputs = document.querySelectorAll('input');
+		// Numero de campos requeridos
+		var requiresNum = 0;
 
 
-			var inputs = document.querySelectorAll('input');
-			for (var i = inputs.length - 1; i >= 0; i--) {
-				console.log(inputs[i].name+inputs[i].value);
+		// Recorro los input para saber cual tiene algun valor y cual no
+		for (var i = 0; i < inputs.length; i++) {
+			// Compruebo que tenga el atributo data-required
+			if (inputs[i].dataset.required) {
+				// Compruebo que dicho campo tenga un valor
+				if (inputs[i].value) {
+					if (inputs[i].dataset.number) {
+						if (!isNaN(inputs[i].value)) {
+							requiresNum++;
+						}else{
+							$('#numError').show();
+						}
+					}else if(inputs[i].dataset.text){
+						if (inputs[i].value.includes('<')) {
+							$('#textError').show();
+						}else{
+							requiresNum++;
+						}
+					}
+				}else{
+					$('#requiredError').show();
+				}
 			}
+		}
+		comprobar(requiresNum);
 
+	}
 
-
-
-			// Compruebo que los elementos no esten vacios
-			if (form.name.value && form.description.value && form.price.value && form.stock.value && form.link.value != '' || null) {
-				console.log('todos los campos tienen algo');
-				$( "p" ).text( "" );
-			}else{
-				$( "button[id='submit']" ).after( "<p>Todos los valores con * son requeridos<p>" );
-			}
-
-			// Validar el precio
-			if (isNaN(form.price.value)) {
-				$( "input[name='price']" ).after( "<p>El precio debe ser un numero<p>" );
-			}else{
-				// Borrar el p anterior
-			}
-
-			// Validar el stock
-			if (isNaN(form.stock.value)) {
-				$( "input[name='stock']" ).after( "<p>El stock debe ser un numero<p>" );
-			}else{
-				// Borrar el p anterior
-			}
-
-
-		});
+	function comprobar(int){
+		console.log(typeof(int));
+		// Siempre que requiresNum sea igual a 5 se activará el boton
+		if(int === 5){
+			submit.disabled = false;
+			$('requiredError').hide();
+			$('textError').hide();
+			$('numError').hide();
+		}
+	}
 
 
 });
 
-/*						Formulario de modificación de productos 					
 
-		// Llama a la funcion validate del plugin de jquery
-		$('#modificar').validate({
-			// Especifica las reglas de validación que se aplican al formulario
-			rules: {
-				name: "required",
-				descripcion: "required",
-				stock: {
-					required: true,
-					number: true
-				},
-				enlace: {
-					required: true,
-					url: true
-				}
-			},
-			// Los mensajes de error en caso de que no se cumplan los requisitos
-			messages: {
-				name: "Es necesario que introduzca un nombre",
-				descripcion: "Es necesario que introduzca una descripcion",
-				stock: {
-					required: "Es necesario que indique el stock del producto",
-					number: "El stock debe ser un numero"
-				},
-				enlace: {
-					required: "Es necesario que introduzca un enlace",
-					url: "Debe introducir un enlace valido"
-				}
-			}
-		});
 
-/*						Formulario de creación de productos 					
-
-		// Llama a la funcion validate del plugin de jquery
-		$('#crear').validate({
-			// Especifica las reglas de validación que se aplican al formulario
-			rules: {
-				name: "required",
-				descripcion: "required",
-				stock: {
-					required: true,
-					number: true
-				},
-				enlace: {
-					required: true,
-					url: true
-				}
-			},
-			// Los mensajes de error en caso de que no se cumplan los requisitos
-			messages: {
-				name: "Es necesario que introduzca un nombre",
-				descripcion: "Es necesario que introduzca una descripcion",
-				stock: {
-					required: "Es necesario que indique el stock del producto",
-					number: "El stock debe ser un numero"
-				},
-				enlace: {
-					required: "Es necesario que introduzca un enlace",
-					url: "Debe introducir un enlace valido"
-				}
-			}
-		});
-	});*/
