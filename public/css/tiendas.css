@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#logo{
+	width: 100px;
+}
+#tabla{
+	display: flex;
+	justify-content: center;
+}
+
+table{
+	width: 95%;
+	box-shadow: 0px 0px 50px lightgray;
+
+}
+th{
+	background-color: grey;
+	color: white;
+}
+#nomb{
+	width: 50%;
+}
+.cod, .nombre, .stock{
+	padding-left: 5px;
+}
+p{
+	margin: 0 5px 0 5px;
+}
+.eliminar{
+	text-align: center;
+}
+
+.eliminar button{
+	width: 30px;
+	height: 30px;
+	margin: auto;
+}
+.eliminar button>img{
+	width: 100%;
+}
+.masinfo{
+	text-align: center;
+}
+#nuevo{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}

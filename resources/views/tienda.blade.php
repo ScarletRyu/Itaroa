@@ -2,47 +2,42 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 
         <title>Itaroa</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
         <!-- Scripts -->
         <script src="js/JQuery/jquery-3.1.1.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
-        <script src="js/validation.js"></script>
+        <!-- Estilo -->
+        <link rel="stylesheet" type="text/css" href="/css/tiendas.css">
 
     </head>
     <body>
+        <a href="{{URL::previous()}}"><img src="/img/arrow_back_icon.svg"></a>
         <div>
             <!-- Imagen y nombre de la tienda -->
-            <img src="algunaruta" alt="Imagen no encontrada">
-            <h2>{{$store->name}}</h2>
+            <img id="logo" src="/{{$store->photo}}" alt="">
         </div>
-        <div>
+        <div id="tabla">
             <!-- Listado de productos de la tienda -->
             <table>
                 <tr>
-                    <th>Codigo de producto</th>
-                    <th>Nombre</th>
-                    <th>Stock</th>
-                    <th>Enlace</th>
-                    <th>Eliminar</th>
+                    <th id="codigo"><p>Codigo de producto</p></th>
+                    <th id="nomb"><p>Nombre</p></th>
+                    <th id="cant"><p>Stock</p></th>
+                    <th></th>
+                    <th></th>
                 </tr>
                 @foreach($products as $product)
                 <tr>
-                    <td>{{$product->id}}</td>
-                    <td>{{$product->name}}</td>
-                    <td>{{$product->stock}}</td>
-                    <td><a href="{{Route('products.show', $product->id)}}">Ver</a></td>
-                    <td>
-                        <form action="{{ route('products.destroy',$product->id) }}" method="post">
+                    <td class="cod"><p>{{$product->id}}</p></td>
+                    <td class="nombre"><p>{{$product->name}}</p></td>
+                    <td class="stock"><p>{{$product->stock}}</p></td>
+                    <td class="masinfo"><a href="{{Route('products.show', $product->id)}}"><img src="/img/more_icon.svg"></a></td>
+                    <td class="eliminar">
+                       <form action="{{ route('products.destroy',$product->id) }}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Eliminar</button>
+                            <button type="submit"><img src="/img/delete_icon.png"></button>
                         </form>
                     </td>
                 </tr>
@@ -51,10 +46,10 @@
         </div>
         <div>
             <!-- Botones de administración de productos de la tienda -->
-            <form action="{{Route('form')}}" method="get">
+            <form id="nuevo" action="{{Route('form')}}" method="get">
                 @csrf
                 <input type="hidden" name="store_id" value="{{$store->id}}">
-                <button type="submit">Añadir</button>
+                <button type="submit">Añadir producto</button>
             </form>
         </div>
     </body>
