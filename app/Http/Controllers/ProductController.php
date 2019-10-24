@@ -62,7 +62,6 @@ class ProductController extends Controller
         // Busco el producto con el id en cuestión
         var_dump($id);
         $product = Product::find($id)->get();
-        var_dump($product[$id-1]);
         return view('producto')->with(['product' => $product[$id-1]]);
     }
 
