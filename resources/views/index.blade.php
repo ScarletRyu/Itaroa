@@ -30,10 +30,9 @@
 			</div>
 			<div id="idiomas">
 				<ul>
-					
-					<li onclick="traducir('eus')" >Eu</li>
-					<li onclick="traducir('eng')">En</li>
-					<li onclick="traducir('esp')">Esp</li>
+					<li  onclick="traducir('eus')" >Eu</li>
+					<li  onclick="traducir('eng')">En</li>
+					<li  onclick="traducir('esp')">Es</li>
 				
 				</ul>
 			</div>

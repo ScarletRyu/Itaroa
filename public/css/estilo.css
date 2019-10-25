@@ -50,15 +50,16 @@ li{
 	margin-right: 7px;
 	color: black;
 	list-style: none;
-	border: 2px ridge rgb(38, 0, 255);
+	
 	
 	
 	
 }
 #idiomas li:hover{
 	color: rgba(14, 120, 27, 1);
-	background-color: aqua;
+	
 }
+
 
 a{
 	text-decoration: none;
@@ -189,7 +190,9 @@ footer{
 		padding-top: 5px;
 		padding-bottom: 5px;
 	
-	
+	}
+
+
 	}
 	h1{
 		font-size: 5em;

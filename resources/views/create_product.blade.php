@@ -17,6 +17,7 @@
 
     </head>
     <body>
+    <a href="{{URL::previous()}}"><img src="/img/arrow_back_icon.svg"></a>
         <header>
             <!-- Imagen y nombre del producto -->
             <img src="{{$store->photo}}" alt="Imagen del Store donde se guarda el prod">
