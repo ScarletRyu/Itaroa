@@ -37,7 +37,7 @@
                 <label>Precio<span>*</span>:</label><br>
                 <input type="number" data-required=true data-number=true name="price"><br>
                 <label>Foto del producto<span>*</span>:</label><br>
-                <input type="text"  name="photo"><br>
+                <input type="file"  name="photo"><br>
                 <label>Enlaces de interés<span>*</span>:</label> <br>
                 <input type="text" data-required=true data-text=true name="link"><br>
                 <button type="submit" id="submit" class="validar">Crear</button><br>

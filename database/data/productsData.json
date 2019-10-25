@@ -21,5 +21,5 @@
 {"name":"Canasta de baloncesto","description":"","link":"Esto deberia ir a la pagina de Forum","stock":650,"price":32.95,"photo":"","store_id":"3"},
 {"name":"Zapatos","description":"","link":"Esto deberia ir a la pagina de Springfield","stock":550,"price":42.95,"photo":"","store_id":"4"},
 {"name":"Vestido blanco","description":"","link":"Esto deberia ir a la pagina de Springfield","stock":650,"price":12.95,"photo":"","store_id":"4"},
-{"name":"Pantalon vaquero","description":"","link":"Esto deberia ir a la pagina de Springfield","stock":450,"price":22.95,"photo":"","store_id":"4"}
+{"name":"Pantalon vaquero","description":"","link":"Esto deberia ir a la pagina de Springfield","stock":450,"price":22.95,"photo":"/img/pantalones_vaqueros.png","store_id":"4"}
 ]
