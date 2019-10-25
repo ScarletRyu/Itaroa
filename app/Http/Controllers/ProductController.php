@@ -84,8 +84,11 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // Busca el producto
         $product = Product::find($id);
+        // Actualiza el stock
         $product->stock = $request->input('stock');
+        // Lo guarda
         $product->save();
         return back();
     }
@@ -98,7 +101,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        var_dump($id);
+        // Destruye el producto buscandolo por id
         Product::destroy($id);
         return back();
     }
