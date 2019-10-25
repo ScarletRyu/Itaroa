@@ -4,24 +4,27 @@ $(document).ready(function(){
 
 	// Boton
 	let submit = document.getElementById('submit');
+	// Mensajes de error
+	let requiredError = document.getElementById('requiredError');
+	let textError = document.getElementById('textError');
+	let numError = document.getElementById('numError');
 	// Deshabilito el boton
 	submit.disabled = true;
-	$('requiredError').hide();
-	$('textError').hide();
-	$('numError').hide();
+	// Oculto los mensajes de error
+	requiredError.hidden = true;
+	textError.hidden = true;
+	numError.hidden = true;
 
 	$('input').change(function(){
-		console.log('ALgun input esta cambiando');
-		$('requiredError').hide();
-		$('textError').hide();
-		$('numError').hide();
 		validator();
 
 	});
 
 	
 	function validator(){
-		console.log('Empieza a validar');
+		requiredError.hidden = true;
+		textError.hidden = true;
+		numError.hidden = true;
 		// Todos los inputs
 		let inputs = document.querySelectorAll('input');
 		// Numero de campos requeridos
@@ -38,17 +41,17 @@ $(document).ready(function(){
 						if (!isNaN(inputs[i].value)) {
 							requiresNum++;
 						}else{
-							$('#numError').show();
+							numError.hidden = false;
 						}
 					}else if(inputs[i].dataset.text){
 						if (inputs[i].value.includes('<')) {
-							$('#textError').show();
+							textError.hidden = false;
 						}else{
 							requiresNum++;
 						}
 					}
 				}else{
-					$('#requiredError').show();
+					requiredError.hidden = false;
 				}
 			}
 		}
@@ -57,13 +60,12 @@ $(document).ready(function(){
 	}
 
 	function comprobar(int){
-		console.log(typeof(int));
 		// Siempre que requiresNum sea igual a 5 se activará el boton
 		if(int === 5){
 			submit.disabled = false;
-			$('requiredError').hide();
-			$('textError').hide();
-			$('numError').hide();
+			requiredError.hidden = true;
+			textError.hidden = true;
+			numError.hidden = true;
 		}
 	}
 
