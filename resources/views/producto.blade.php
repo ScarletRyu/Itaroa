@@ -30,12 +30,12 @@
                 <p>Visita la página oficial de la tienda aquí: </p>
                 <a href="{{$product->link}}"></a>
             </article>
-            <form id="form" method="POST" action="{{ route('products.update',$product->id) }}" novalidate>
+            <form method="POST" action="{{ route('products.update',$product->id) }}" novalidate>
                 @csrf
                 @method('PUT')
 
                 <label>Stock: <label></label><input type="number" name="stock" value="{{$product->stock}}" >
-                <button id="submit" type="submit" class="validar">Modificar</button>
+                <button type="submit" class="validar">Modificar</button>
             </form>
         </section>
         <section id="imagen">
