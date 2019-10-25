@@ -1,0 +1,38 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-image: url(/img/producto_fondo.png);
+	background-repeat: repeat-y;
+	background-attachment:  fixed;
+	font-family: sans-serif;
+
+}
+#contenido{
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+section{	
+	width: 450px;
+	margin: 0 10px 10px 0;
+}
+#info>*{
+	margin: 10px;
+}
+#imagen{
+
+}
+#imagen img{
+	width: 250px;
+	margin: auto;
+	border: 3px solid lightblue;
+	border-radius: 5px; 
+}#imagen>article{
+	display: flex;
+	justify-content: center;
+}
