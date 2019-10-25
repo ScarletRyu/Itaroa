@@ -99,6 +99,7 @@ h1{
 section{
 	margin: 10px 0 10px 0;
 }
+
 h3{
 	width: 100%;
 	text-align: center;
@@ -114,9 +115,7 @@ article{
 	flex-wrap: wrap;
 	justify-content: space-around;
 }
-#ubicacion{
-	margin-top: 60px;
-}
+
 .tarjeta{
 	width: 200px;
 	height: 200px;
@@ -150,9 +149,20 @@ article{
 	text-decoration: none;
 	color: black;
 }
+#ubicacion{
+	margin-top: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
 
 #mapa{
 	width: 95%;
+}
+#contacto{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 form{
 	margin-top: 40px;
