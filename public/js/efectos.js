@@ -5,5 +5,10 @@ $(document).ready(function($) {
 		$(this).children('.datos').fadeOut(200);
 	})
 
+
+	$('#icono_menu').click(function(event) {
+		$('#buscador').slideToggle(400);
+	});
+
 	
 });

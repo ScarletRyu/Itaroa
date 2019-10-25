@@ -20,6 +20,7 @@
 			</div>
 		</header>
 		<nav>
+			<img id="icono_menu" src="/img/menu_icon.svg">
 			<div id="buscador">
 				<ul>
 					<li class="trn" data-trn-key="Tienda"><a href="#stores">Tiendas</a></li>
@@ -30,9 +31,9 @@
 			</div>
 			<div id="idiomas">
 				<ul>
-					<li  onclick="traducir('eus')" >Eu</li>
-					<li  onclick="traducir('eng')">En</li>
-					<li  onclick="traducir('esp')">Es</li>
+					<li class="idioma" data-name="eu">Eu</li>
+					<li class="idioma" data-name="en">En</li>
+					<li class="idioma" data-name="es">Es</li>
 				
 				</ul>
 			</div>

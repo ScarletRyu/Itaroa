@@ -23,14 +23,14 @@ nav{
 #idiomas{
 	background-color: rgba(255, 255, 255,.7);
 	
-	
-	
 }
 #buscador{
 	background-color: rgba(44, 140, 230,.7);
-	
 }
 
+#icono_menu{
+	display: none;
+}
 nav ul{
 	display: flex;
 	flex-direction: row;
@@ -50,10 +50,7 @@ li{
 	margin-right: 7px;
 	color: black;
 	list-style: none;
-	
-	
-	
-	
+
 }
 #idiomas li:hover{
 	color: rgba(14, 120, 27, 1);
@@ -92,7 +89,7 @@ header img{
 	height: 90vh,
 }
 h1{
-	font-size: 8em;
+	font-size: 10em!important;
 	font-family: Dancing;
 	-webkit-text-stroke: 1px green;
 	color: white;
@@ -177,6 +174,12 @@ footer{
 }
 
 @media (max-width: 600px){
+	#buscador{
+		display: none;
+	}
+	#icono_menu{
+		display: block;
+	}
 	body{
 		font-size: 18px;
 	}
@@ -189,16 +192,13 @@ footer{
 		text-align: center;
 		padding-top: 5px;
 		padding-bottom: 5px;
-	
 	}
 
-
-	}
 	h1{
-		font-size: 5em;
+		font-size: 5em!important;
 	}
 	#nombre, #email, textarea{
-	width: 95%;
+		width: 95%;
 	}
 
 	
