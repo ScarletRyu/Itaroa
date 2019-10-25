@@ -85,12 +85,7 @@ class ProductController extends Controller
     public function update(Request $request, $id)
     {
         $product = Product::find($id);
-        $product->name = $request->input('name');
-        $product->description = $request->input('description');
         $product->stock = $request->input('stock');
-        $product->price = $request->input('price');
-        $product->link = $request->input('link');
-        $product->photo = $request->input('photo');
         $product->save();
         return back();
     }
