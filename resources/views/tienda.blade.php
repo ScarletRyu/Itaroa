@@ -32,7 +32,11 @@
                     <td class="cod"><p>{{$product->id}}</p></td>
                     <td class="nombre"><p>{{$product->name}}</p></td>
                     <td class="stock"><p>{{$product->stock}}</p></td>
-                    <td class="masinfo"><a href="{{Route('products.show', $product->id)}}"><img src="/img/more_icon.svg"></a></td>
+                    <td class="masinfo">
+                        <a href="{{Route('products.show', $product->id)}}">
+                            <img src="/img/more_icon.svg">
+                        </a>
+                    </td>
                     <td class="eliminar">
                        <form action="{{ route('products.destroy',$product->id) }}" method="post">
                             @csrf

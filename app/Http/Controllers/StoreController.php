@@ -73,7 +73,8 @@ class StoreController extends Controller
     {
 
         $store_id = $request->store_id;
-        return view('create_product')->with(['store_id' => $store_id]);
+        $store = Store::find($store_id);
+        return view('create_product')->with(['store' => $store]);
     }
 
     /**

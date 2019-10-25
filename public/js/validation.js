@@ -21,6 +21,7 @@ $(document).ready(function(){
 	});
 
 	
+
 	function validator(){
 		requiredError.hidden = true;
 		textError.hidden = true;
@@ -29,6 +30,7 @@ $(document).ready(function(){
 		let inputs = document.querySelectorAll('input');
 		// Numero de campos requeridos
 		var requiresNum = 0;
+		
 
 
 		// Recorro los input para saber cual tiene algun valor y cual no
@@ -60,8 +62,9 @@ $(document).ready(function(){
 	}
 
 	function comprobar(int){
-		// Siempre que requiresNum sea igual a 5 se activará el boton
-		if(int === 5){
+
+		let requeridos = document.querySelectorAll('input[data-required="true"]');
+		if(int === requeridos.length){
 			submit.disabled = false;
 			requiredError.hidden = true;
 			textError.hidden = true;
