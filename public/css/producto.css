@@ -24,15 +24,18 @@ section{
 #info>*{
 	margin: 10px;
 }
-#imagen{
 
-}
 #imagen img{
 	width: 250px;
 	margin: auto;
 	border: 3px solid lightblue;
 	border-radius: 5px; 
+	background-color: white;
 }#imagen>article{
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+
 }
