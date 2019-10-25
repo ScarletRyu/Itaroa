@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'StoreController@index');
+Route::get('/', 'StoreController@index')->name('index');
 Route::get('create_product', 'StoreController@form')->name('form');
 
 

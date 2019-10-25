@@ -12,7 +12,7 @@
 
     </head>
     <body>
-        <a href="{{URL::previous()}}"><img src="/img/arrow_back_icon.svg"></a>
+        <a href="{{route('index')}}"><img src="/img/arrow_back_icon.svg"></a>
         <div>
             <!-- Imagen y nombre de la tienda -->
             <img id="logo" src="/{{$store->photo}}" alt="">
