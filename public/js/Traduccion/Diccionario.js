@@ -85,5 +85,6 @@ var dict = {
 }
 
 function traducir(idioma){
-	var translator = $('body').translate({lang: idioma, t: dict});
+    var translator = $('body').translate({lang: idioma, t: dict});
+
 }
