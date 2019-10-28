@@ -4,14 +4,14 @@ jQuery(document).ready(function($) {
 
     var dict = {
         "Restaurante":{
-            en:"Restaurant",
-            eu:"Jatetxea",
-            es:"Restaurante"			
+            en:"Restaurants",
+            eu:"Jatetxeak",
+            es:"Restaurantes"			
         },
         "Tienda":{
-            en:"Shop",
-            eu:"Denda",
-            es:"Tienda"
+            en:"Shops",
+            eu:"Dendak",
+            es:"Tiendas"
         },
         "Ubicacion":{
             en:"Location",
@@ -20,19 +20,14 @@ jQuery(document).ready(function($) {
         },
         "Contacto":{
             en:"Contact us",
-            eu:"Deitu",
-            es:"Contacto"
+            eu:"Gurekin kontaktatu",
+            es:"Contacta con nosotros"
         },
         /*Tiendas */
         "TitTienda":{
             en:"Shops",
             eu:"Dendak",
             es:"Tiendas"
-        },
-        "Contacto":{
-            en:"Contact us",
-            eu:"Kontaktatu",
-            es:"Contacto"
         },
         "Tienda1":{
             en:"From: 10:00 ",

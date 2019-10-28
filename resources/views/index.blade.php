@@ -25,7 +25,7 @@
 				<ul>
 					<li class="trn" data-trn-key="Tienda"><a href="#stores">Tiendas</a></li>
 					<li class="trn" data-trn-key="Restaurante"><a href="#rests">Restaurantes</a></li>
-					<li class="trn" data-trn-key="Ubicacion"><a href="#ubicacion">Donde estamos</a></li>
+					<li class="trn" data-trn-key="Ubicacion"><a href="#ubicacion">Ubicación</a></li>
 					<li class="trn" data-trn-key="Contacto"><a href="#contacto">Contacta con nosotros</a></li>
 				</ul>
 			</div>

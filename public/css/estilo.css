@@ -63,7 +63,7 @@ a{
 
 }
 #buscador a{
-	color: white;
+	color: black;
 }
 #buscador li:hover{
 	background-color: rgba(44, 140, 230,1);
