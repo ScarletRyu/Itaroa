@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <a href="{{URL::previous()}}"><img src="/img/arrow_back_icon.svg"></a>
+    <a href="{{route('stores.show', $product->store_id)}}"><img src="/img/arrow_back_icon.svg"></a>
     <div id="contenido">
         <!-- información del producto -->
         <section id="info" >
