@@ -27,8 +27,8 @@
                 <p>{{$product->price}}€</p>
             </article>
             <article id="enlace">
-                <p>Visita la página oficial de la tienda aquí: </p>
-                <a href="{{$product->link}}"></a>
+                <p>Visita la página oficial de la tienda, </p>
+                <a href="{{$product->link}}"> aquí</a>
             </article>
             <form method="POST" action="{{ route('products.update',$product->id) }}" novalidate>
                 @csrf
